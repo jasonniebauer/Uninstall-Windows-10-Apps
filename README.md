@@ -1,8 +1,23 @@
 # Uninstall Windows 10 Apps
 How to uninstall Windows 10 apps (even those built-in) using PowerShell commands.
 
-Reference: https://pureinfotech.com/uninstall-apps-powershell-windows-10/
+- [Reference 1](https://pureinfotech.com/uninstall-apps-powershell-windows-10)
+- [Reference 2]()
 
+**POWERSHELL TIP:** It's much easier to type PowerShell commands in all lowercase. The following PowerShell commands have been capitalized for your viewing pleasure, but again, it is not required.
+
+That means
+```
+get-appxpackage
+```
+will be interpreted the same as
+```
+Get-AppxPackage
+```
+
+## Instructions
+
+### Step 1
 View apps installed for your account.
 ```
 Get-AppxPackage
@@ -16,4 +31,12 @@ Get-AppxPackage -AllUsers
 Uninstall the app.
 ```
 Get-AppxPackage Microsoft.WindowsCamera | Remove-AppxPackage
+```
+
+## Common Errors
+
+Users will encounter an error message if the app is part of Windows and unable to be uninstalled on a per-user basis.
+Add the `-allusers` arguement to remedy this.
+```
+Get-AppxPackage Microsoft.Wallet -AllUsers | Remove-AppxPackage
 ```
