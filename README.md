@@ -1,8 +1,8 @@
 # Uninstall Windows 10 Apps
-How to uninstall Windows 10 apps (even those built-in) using PowerShell commands.
+How to remove Windows 10 apps (even those built-in) with PowerShell.
 
 - [Reference 1](https://pureinfotech.com/uninstall-apps-powershell-windows-10)
-- [Reference 2]()
+- [Reference 2](https://www.askvg.com/guide-how-to-remove-all-built-in-apps-in-windows-10/)
 
 **POWERSHELL TIP:** It's much easier to type PowerShell commands in all lowercase. The following PowerShell commands have been capitalized for your viewing pleasure, but again, it is not required.
 
