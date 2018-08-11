@@ -36,7 +36,7 @@ Get-AppxPackage Microsoft.WindowsCamera | Remove-AppxPackage
 ## Common Errors
 
 Users will encounter an error message if the app is part of Windows and unable to be uninstalled on a per-user basis.
-Add the `-allusers` arguement to remedy this.
+Add the `-AllUsers` arguement to remedy this.
 ```
 Get-AppxPackage Microsoft.Wallet -AllUsers | Remove-AppxPackage
 ```
