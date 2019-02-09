@@ -12,25 +12,32 @@ will be interpreted the same as
 Get-AppxPackage
 ```
 
-## Instructions
-View apps installed for your account.
+## View Installed Apps
+View apps installed for the signed in user account.
 ```
 Get-AppxPackage
 ```
 
-View apps installed on the machine.
+View apps installed for all users on the machine.
 ```
 Get-AppxPackage -AllUsers
 ```
 
-Uninstall specific app.
+## Uninstall Apps
+Uninstall apps with the command below where `<NAME>` is the name of the app you wish to remove.
 ```
-Get-AppxPackage Microsoft.WindowsCamera | Remove-AppxPackage
+Get-AppxPackage <NAME> | Remove-AppxPackage
+```
+
+Here is an example of uninstalling Zune Music for the signed in user account.
+```
+Get-AppxPackage Microsoft.ZuneMusic | Remove-AppxPackage
 ```
 
 ## Common Errors
-Users will encounter an error message if the app is part of Windows and unable to be uninstalled on a per-user basis.
-Add the `-AllUsers` arguement to remedy this.
+An error message will be displayed if the app is part of Windows and unable to be uninstalled on a per-user basis. This means that the app must be uninstalled for all users.
+
+Add the `-AllUsers` flag to remedy this.
 ```
 Get-AppxPackage Microsoft.Wallet -AllUsers | Remove-AppxPackage
 ```
